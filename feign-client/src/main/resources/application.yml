@@ -1,6 +1,8 @@
 spring:
   application:
     name: feign-client
+  resources:
+    static-locations: /resources/**
 
 server:
   port: 7211

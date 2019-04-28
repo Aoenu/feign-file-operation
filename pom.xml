@@ -8,9 +8,12 @@
         <version>1.4.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.aoenu.feign</groupId>
     <artifactId>feign-file-operation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <name>feign-file-operation</name>
     <description>Demo project for Spring Boot</description>
 
@@ -67,6 +70,15 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+
+        <!-- aspose -->
+        <repository>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>https://repository.aspose.com/repo/</url>
+        </repository>
+
+
     </repositories>
     <pluginRepositories>
         <pluginRepository>

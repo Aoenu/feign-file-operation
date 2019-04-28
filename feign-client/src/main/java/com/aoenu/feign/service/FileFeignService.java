@@ -6,6 +6,7 @@ import com.aoenu.feign.constant.FileConstants;
 import com.aoenu.feign.service.fallback.FileFeignServiceImpl;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -36,4 +37,12 @@ public interface FileFeignService {
                        @RequestPart(value = "file") MultipartFile multipartFile);
 
 
+    /**
+     * 下载
+     *
+     * @param fileType
+     * @return
+     */
+    @RequestMapping("/downloadFile")
+    ResponseEntity<byte[]> downloadFile(@RequestParam(value = "fileType")  String fileType);
 }
